@@ -1,0 +1,25 @@
+package kodlama.io.homework5.business.mapper.programminglanguage;
+
+import kodlama.io.homework5.business.requests.programminglanguage.CreateProgrammingLanguageRequest;
+import kodlama.io.homework5.business.responses.programminglanguage.*;
+import kodlama.io.homework5.entities.concretes.ProgrammingLanguage;
+import kodlama.io.homework5.business.requests.programminglanguage.UpdateProgrammingLanguageRequest;
+import org.mapstruct.Mapper;
+
+@Mapper(componentModel = "spring")
+public interface ProgrammingLanguageMapper {
+    ProgrammingLanguage createProgrammingLanguageRequestToProgrammingLanguage(CreateProgrammingLanguageRequest createProgrammingLanguageRequest);
+
+    ProgrammingLanguage updateProgrammingLanguageRequestToProgrammingLanguage(UpdateProgrammingLanguageRequest updateProgrammingLanguageRequest);
+
+    GetAllProgrammingLanguagesResponse programmingLanguageToGetAllProgrammingLanguagesResponse(ProgrammingLanguage programmingLanguage);
+
+    GetByIdProgrammingLanguageResponse programmingLanguageToGetByIdProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+    CreateProgrammingLanguageResponse programmingLanguageToCreateProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+    UpdateProgrammingLanguageResponse programmingLanguageToUpdateProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+    DeleteProgrammingLanguageResponse programmingLanguageToDeleteProgrammingLanguageResponse(ProgrammingLanguage programmingLanguage);
+
+}
